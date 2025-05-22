@@ -9,7 +9,7 @@ const ProductsPage: React.FC = () => {
   const categoryParam = searchParams.get('category');
   
   const [displayedProducts, setDisplayedProducts] = useState(products);
-  const [activeCategory, setActiveCategory] = useState<string | null>(categoryParam);
+  const [activeCategory, setActiveCategory] = useState<string>(categoryParam || 'all');
   const [showFilters, setShowFilters] = useState(false);
   
   const categories = ['all', 'art', 'clothing', 'home'];
